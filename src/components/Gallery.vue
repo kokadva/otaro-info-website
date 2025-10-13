@@ -6,15 +6,81 @@ interface ShelfItem {
   title: string
   image: string
   description: string
+  galleryImages: string[]
 }
 
 const shelves = ref<ShelfItem[]>([
-  { id: 1, title: 'Mint Green Wavy Shelf', image: '/IMG_4538.jpg', description: 'Perfect for books and decor' },
-  { id: 2, title: 'Soft Mint Display', image: '/IMG_4542.jpg', description: 'Elegant curved design' },
-  { id: 3, title: 'Minimal Green Shelf', image: '/IMG_4557.jpg', description: 'Clean and modern' },
-  { id: 4, title: 'Mint Statement Piece', image: '/IMG_4579_jpg.jpg', description: 'Eye-catching wave shape' },
-  { id: 5, title: 'Stylish Green Shelf', image: '/IMG_4583.jpg', description: 'Functional art for your wall' },
+  {
+    id: 1,
+    title: 'Mint Green Wavy Shelf',
+    image: '/IMG_4538.jpg',
+    description: 'Perfect for books and decor',
+    galleryImages: ['/IMG_4538.jpg', '/IMG_4542.jpg', '/IMG_4557.jpg', '/IMG_4579_jpg.jpg']
+  },
+  {
+    id: 2,
+    title: 'Soft Mint Display',
+    image: '/IMG_4542.jpg',
+    description: 'Elegant curved design',
+    galleryImages: ['/IMG_4542.jpg', '/IMG_4538.jpg', '/IMG_4583.jpg', '/IMG_4557.jpg']
+  },
+  {
+    id: 3,
+    title: 'Minimal Green Shelf',
+    image: '/IMG_4557.jpg',
+    description: 'Clean and modern',
+    galleryImages: ['/IMG_4557.jpg', '/IMG_4579_jpg.jpg', '/IMG_4538.jpg', '/IMG_4542.jpg']
+  },
+  {
+    id: 4,
+    title: 'Mint Statement Piece',
+    image: '/IMG_4579_jpg.jpg',
+    description: 'Eye-catching wave shape',
+    galleryImages: ['/IMG_4579_jpg.jpg', '/IMG_4583.jpg', '/IMG_4542.jpg', '/IMG_4557.jpg']
+  },
+  {
+    id: 5,
+    title: 'Stylish Green Shelf',
+    image: '/IMG_4583.jpg',
+    description: 'Functional art for your wall',
+    galleryImages: ['/IMG_4583.jpg', '/IMG_4538.jpg', '/IMG_4579_jpg.jpg', '/IMG_4542.jpg']
+  },
 ])
+
+const isModalOpen = ref(false)
+const currentShelf = ref<ShelfItem | null>(null)
+const currentImageIndex = ref(0)
+
+const openModal = (shelf: ShelfItem) => {
+  currentShelf.value = shelf
+  currentImageIndex.value = 0
+  isModalOpen.value = true
+  document.body.style.overflow = 'hidden'
+}
+
+const closeModal = () => {
+  isModalOpen.value = false
+  currentShelf.value = null
+  document.body.style.overflow = ''
+}
+
+const nextImage = () => {
+  if (currentShelf.value) {
+    currentImageIndex.value = (currentImageIndex.value + 1) % currentShelf.value.galleryImages.length
+  }
+}
+
+const prevImage = () => {
+  if (currentShelf.value) {
+    currentImageIndex.value = currentImageIndex.value === 0
+      ? currentShelf.value.galleryImages.length - 1
+      : currentImageIndex.value - 1
+  }
+}
+
+const goToImage = (index: number) => {
+  currentImageIndex.value = index
+}
 </script>
 
 <template>
@@ -28,10 +94,13 @@ const shelves = ref<ShelfItem[]>([
           v-for="shelf in shelves"
           :key="shelf.id"
           class="shelf-card"
+          @click="openModal(shelf)"
         >
           <div class="shelf-image">
             <img :src="shelf.image" :alt="shelf.title" />
-            <div class="image-overlay"></div>
+            <div class="image-overlay">
+              <span class="view-gallery">View Gallery</span>
+            </div>
           </div>
           <div class="shelf-info">
             <h3 class="shelf-name">{{ shelf.title }}</h3>
@@ -39,6 +108,59 @@ const shelves = ref<ShelfItem[]>([
           </div>
         </div>
       </div>
+
+      <Teleport to="body">
+        <Transition name="modal">
+          <div v-if="isModalOpen" class="modal-overlay" @click="closeModal">
+            <div class="modal-content" @click.stop>
+              <button class="close-button" @click="closeModal" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </button>
+
+              <div class="modal-header">
+                <h3>{{ currentShelf?.title }}</h3>
+                <p>{{ currentShelf?.description }}</p>
+              </div>
+
+              <div class="image-viewer">
+                <button class="nav-button prev" @click="prevImage" aria-label="Previous image">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </button>
+
+                <div class="main-image">
+                  <img
+                    v-if="currentShelf"
+                    :src="currentShelf.galleryImages[currentImageIndex]"
+                    :alt="`${currentShelf.title} - Image ${currentImageIndex + 1}`"
+                  />
+                </div>
+
+                <button class="nav-button next" @click="nextImage" aria-label="Next image">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="thumbnail-strip">
+                <div
+                  v-for="(image, index) in currentShelf?.galleryImages"
+                  :key="index"
+                  class="thumbnail"
+                  :class="{ active: index === currentImageIndex }"
+                  @click="goToImage(index)"
+                >
+                  <img :src="image" :alt="`Thumbnail ${index + 1}`" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </Transition>
+      </Teleport>
 
       <div class="cta-section">
         <p class="cta-text">Love what you see? Let's create something special for your space!</p>
@@ -122,13 +244,31 @@ const shelves = ref<ShelfItem[]>([
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.05) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .shelf-card:hover .image-overlay {
   opacity: 1;
+}
+
+.view-gallery {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: rgba(139, 201, 168, 0.95);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+.shelf-card:hover .view-gallery {
+  transform: translateY(0);
 }
 
 .shelf-info {
@@ -181,6 +321,172 @@ const shelves = ref<ShelfItem[]>([
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #f3f4f6;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #374151;
+  z-index: 10;
+}
+
+.close-button:hover {
+  background: #e5e7eb;
+  transform: rotate(90deg);
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-right: 3rem;
+}
+
+.modal-header h3 {
+  font-size: 1.8rem;
+  color: #8bc9a8;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.modal-header p {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.image-viewer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.main-image {
+  flex: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 500px;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nav-button {
+  background: rgba(139, 201, 168, 0.95);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  flex-shrink: 0;
+}
+
+.nav-button:hover {
+  background: #6bb896;
+  transform: scale(1.1);
+}
+
+.thumbnail-strip {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  flex-shrink: 0;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+  border-color: #a8d5ba;
+}
+
+.thumbnail.active {
+  border-color: #8bc9a8;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+
+.modal-enter-active .modal-content,
+.modal-leave-active .modal-content {
+  transition: transform 0.3s ease;
+}
+
+.modal-enter-from .modal-content,
+.modal-leave-to .modal-content {
+  transform: scale(0.9);
+}
+
 @media (max-width: 768px) {
   .gallery {
     padding: 4rem 1.5rem;
@@ -192,6 +498,36 @@ const shelves = ref<ShelfItem[]>([
 
   .cta-section {
     padding: 2rem 1.5rem;
+  }
+
+  .modal-overlay {
+    padding: 1rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+
+  .modal-header {
+    padding-right: 2rem;
+  }
+
+  .modal-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .nav-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .main-image {
+    max-height: 350px;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 60px;
   }
 }
 </style>
