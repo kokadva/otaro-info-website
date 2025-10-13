@@ -6,7 +6,7 @@
           <h2 class="section-title">Let's Connect!</h2>
           <p class="description">
             Ready to add some color to your space? I'd love to hear from you!
-            Send me an email with your ideas, questions, or custom requests.
+            Send me an email if you want to make an order or if you have any ideas, questions, or custom requests.
           </p>
 
           <div class="contact-details">
