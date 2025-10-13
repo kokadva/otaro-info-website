@@ -26,10 +26,10 @@
         <path d="M20,60 Q30,30 40,60 T60,60 T80,60 T100,60 T120,60 T140,60" fill="none" stroke="#f5a3c7" stroke-width="18" stroke-linecap="round" opacity="0.4"/>
       </svg>
       <svg class="floating-svg svg-4" viewBox="0 0 240 85" opacity="0.38" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="60" cy="42" rx="55" ry="33" fill="#7eb8d4" opacity="0.38"/>
-        <ellipse cx="145" cy="42" rx="65" ry="33" fill="#7eb8d4" opacity="0.38"/>
-        <ellipse cx="185" cy="42" rx="45" ry="28" fill="#7eb8d4" opacity="0.33"/>
-        <ellipse cx="102" cy="37" rx="58" ry="28" fill="#7eb8d4" opacity="0.42"/>
+        <ellipse cx="60" cy="42" rx="55" ry="33" fill="#7eb8d4"/>
+        <ellipse cx="145" cy="42" rx="65" ry="33" fill="#7eb8d4"/>
+        <ellipse cx="185" cy="42" rx="45" ry="28" fill="#7eb8d4"/>
+        <ellipse cx="102" cy="37" rx="58" ry="28" fill="#7eb8d4"/>
       </svg>
       <svg class="floating-svg svg-5" viewBox="0 0 150 90" xmlns="http://www.w3.org/2000/svg">
         <path d="M15,45 Q25,25 35,45 T55,45 T75,45 T95,45 T115,45" fill="none" stroke="#f9c8a8" stroke-width="12" stroke-linecap="round" opacity="0.42"/>
