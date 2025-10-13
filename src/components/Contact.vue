@@ -109,7 +109,6 @@
   align-items: flex-start;
   gap: 1.5rem;
   padding: 1.5rem;
-  background: linear-gradient(135deg, #fef8f4 0%, #fff5e6 100%);
   border-radius: 15px;
   border: 2px solid #8bc9a8;
 }
