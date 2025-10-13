@@ -146,7 +146,7 @@
 }
 
 .info-box {
-  background: linear-gradient(135deg, #f4d35e 0%, #fae588 100%);
+  background: linear-gradient(135deg, #ffeca8 0%, #fff4c3 100%);
   padding: 1.5rem;
   border-radius: 15px;
   margin-top: 2rem;
