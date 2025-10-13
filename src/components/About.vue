@@ -87,7 +87,7 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: linear-gradient(135deg, #a8dadc 0%, #fef8f4 100%);
+  background: linear-gradient(135deg, #fff5e6 0%, #a8dadc 100%);
   border-radius: 15px;
   transition: transform 0.3s ease;
 }
