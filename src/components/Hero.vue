@@ -156,7 +156,7 @@
   width: 180px;
   height: 120px;
   bottom: 30%;
-  left: 15%;
+  left: 13%;
   animation-delay: 3s;
 }
 
