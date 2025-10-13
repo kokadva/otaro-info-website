@@ -148,6 +148,7 @@
   .image-placeholder {
     order: -1;
     height: 200px;
+    min-height: 200px;
   }
 
   .about {
