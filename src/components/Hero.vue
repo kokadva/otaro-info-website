@@ -180,7 +180,7 @@
   width: 260px;
   height: 90px;
   top: 40%;
-  left: 25%;
+  left: 22%;
   animation-delay: 5s;
 }
 
