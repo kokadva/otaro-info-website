@@ -29,7 +29,6 @@
               <strong>What to include:</strong><br>
               • Which design caught your eye<br>
               • Your preferred colors<br>
-              • Any custom size or shape ideas<br>
               • Your location for shipping details
             </p>
           </div>
