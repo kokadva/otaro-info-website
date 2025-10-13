@@ -115,6 +115,7 @@
   justify-content: center;
   min-height: 400px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .placeholder-content {
@@ -133,6 +134,9 @@
   font-size: 1.3rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 @media (max-width: 968px) {
