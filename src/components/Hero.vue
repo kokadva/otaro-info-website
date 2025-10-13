@@ -42,12 +42,6 @@
       <svg class="floating-svg svg-7" viewBox="0 0 190 95" xmlns="http://www.w3.org/2000/svg">
         <path d="M12,48 Q28,22 44,48 T76,48 T108,48 T140,48 T172,48" fill="none" stroke="#8fc5ab" stroke-width="14" stroke-linecap="round" opacity="0.42"/>
       </svg>
-      <svg class="floating-svg svg-8" viewBox="0 0 270 90" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="68" cy="45" rx="62" ry="36" fill="#f9b8d9" opacity="0.35"/>
-        <ellipse cx="165" cy="45" rx="72" ry="36" fill="#f9b8d9" opacity="0.35"/>
-        <ellipse cx="205" cy="45" rx="52" ry="31" fill="#f9b8d9" opacity="0.3"/>
-        <ellipse cx="116" cy="40" rx="66" ry="31" fill="#ffd1e6" opacity="0.38"/>
-      </svg>
     </div>
   </section>
 </template>
