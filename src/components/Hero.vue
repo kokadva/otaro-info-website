@@ -179,7 +179,7 @@
 .svg-6 {
   width: 260px;
   height: 90px;
-  top: 42%;
+  top: 40%;
   left: 25%;
   animation-delay: 5s;
 }
