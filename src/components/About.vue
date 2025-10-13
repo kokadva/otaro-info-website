@@ -152,8 +152,8 @@
   }
 
   .placeholder-content p {
-    top: 30%;
-    left: 20%;
+    top: 40%;
+    left: 30%;
   }
 
   .about {
