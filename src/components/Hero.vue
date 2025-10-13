@@ -19,7 +19,7 @@
       </svg>
       <svg class="floating-svg svg-2" viewBox="0 0 220 90" opacity="0.4" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="70" cy="45" rx="50" ry="35" fill="#f5c842"/>
-        <ellipse cx="130" cy="45" rx="60" ry="35" fill="#f5c842"/>
+        <ellipse cx="130" cy="45" rx="60" ry="38" fill="#f5c842"/>
         <ellipse cx="180" cy="45" rx="40" ry="28" fill="#f5c842"/>
       </svg>
       <svg class="floating-svg svg-3" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
