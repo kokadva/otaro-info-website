@@ -170,7 +170,7 @@
 .svg-5 {
   width: 150px;
   height: 90px;
-  bottom: 15%;
+  bottom: 10%;
   right: 8%;
   animation-delay: 2s;
 }
