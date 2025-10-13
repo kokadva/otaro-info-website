@@ -14,9 +14,30 @@
     </div>
 
     <div class="floating-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
+      <svg class="floating-svg svg-1" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10,50 Q30,20 50,50 T90,50 T130,50 T170,50" fill="none" stroke="#8bc9a8" stroke-width="15" stroke-linecap="round" opacity="0.4"/>
+      </svg>
+      <svg class="floating-svg svg-2" viewBox="0 0 250 80" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="60" cy="40" rx="50" ry="30" fill="#f4d35e" opacity="0.35"/>
+        <ellipse cx="140" cy="40" rx="60" ry="30" fill="#f4d35e" opacity="0.35"/>
+        <ellipse cx="100" cy="35" rx="55" ry="25" fill="#fae588" opacity="0.35"/>
+      </svg>
+      <svg class="floating-svg svg-3" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20,60 Q30,30 40,60 T60,60 T80,60 T100,60 T120,60 T140,60" fill="none" stroke="#a8d5ba" stroke-width="18" stroke-linecap="round" opacity="0.35"/>
+      </svg>
+      <svg class="floating-svg svg-4" viewBox="0 0 200 70" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="35" rx="45" ry="28" fill="#b8d4e8" opacity="0.3"/>
+        <ellipse cx="120" cy="35" rx="55" ry="28" fill="#b8d4e8" opacity="0.3"/>
+        <ellipse cx="85" cy="32" rx="48" ry="24" fill="#d4e8f5" opacity="0.3"/>
+      </svg>
+      <svg class="floating-svg svg-5" viewBox="0 0 150 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15,45 Q25,25 35,45 T55,45 T75,45 T95,45 T115,45" fill="none" stroke="#f9e07f" stroke-width="12" stroke-linecap="round" opacity="0.4"/>
+      </svg>
+      <svg class="floating-svg svg-6" viewBox="0 0 220 75" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="55" cy="38" rx="48" ry="30" fill="#e8d5c4" opacity="0.35"/>
+        <ellipse cx="135" cy="38" rx="58" ry="30" fill="#e8d5c4" opacity="0.35"/>
+        <ellipse cx="95" cy="34" rx="52" ry="26" fill="#f5e6d3" opacity="0.35"/>
+      </svg>
     </div>
   </section>
 </template>
@@ -106,38 +127,57 @@
   pointer-events: none;
 }
 
-.shape {
+.floating-svg {
   position: absolute;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  opacity: 0.3;
-  animation: float 6s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
 
-.shape-1 {
-  width: 150px;
-  height: 150px;
-  background: linear-gradient(135deg, #8bc9a8 0%, #a8d5ba 100%);
-  top: 20%;
-  left: 10%;
+.svg-1 {
+  width: 200px;
+  height: 100px;
+  top: 15%;
+  left: 8%;
   animation-delay: 0s;
 }
 
-.shape-2 {
+.svg-2 {
+  width: 250px;
+  height: 80px;
+  top: 25%;
+  right: 12%;
+  animation-delay: 1.5s;
+}
+
+.svg-3 {
+  width: 180px;
+  height: 120px;
+  bottom: 30%;
+  left: 15%;
+  animation-delay: 3s;
+}
+
+.svg-4 {
   width: 200px;
-  height: 200px;
-  background: linear-gradient(135deg, #f4d35e 0%, #fae588 100%);
-  bottom: 25%;
-  right: 15%;
+  height: 70px;
+  top: 55%;
+  right: 20%;
+  animation-delay: 4.5s;
+}
+
+.svg-5 {
+  width: 150px;
+  height: 90px;
+  bottom: 15%;
+  right: 8%;
   animation-delay: 2s;
 }
 
-.shape-3 {
-  width: 120px;
-  height: 120px;
-  background: linear-gradient(135deg, #e8d5c4 0%, #f5e6d3 100%);
-  top: 60%;
-  left: 20%;
-  animation-delay: 4s;
+.svg-6 {
+  width: 220px;
+  height: 75px;
+  top: 40%;
+  left: 25%;
+  animation-delay: 5s;
 }
 
 @keyframes fadeIn {
@@ -166,7 +206,7 @@
     padding: 1rem;
   }
 
-  .shape {
+  .floating-svg {
     display: none;
   }
 }
