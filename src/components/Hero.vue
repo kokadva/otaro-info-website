@@ -34,8 +34,8 @@
       <svg class="floating-svg svg-5" viewBox="0 0 150 90" xmlns="http://www.w3.org/2000/svg">
         <path d="M15,45 Q25,25 35,45 T55,45 T75,45 T95,45 T115,45" fill="none" stroke="#f9c8a8" stroke-width="12" stroke-linecap="round" opacity="0.42"/>
       </svg>
-      <svg class="floating-svg svg-6" viewBox="0 0 260 90" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="65" cy="45" rx="58" ry="36" fill="#e8b8a8" opacity="0.38"/>
+      <svg class="floating-svg svg-6" viewBox="0 0 260 90"  opacity="0.38" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="65" cy="45" rx="58" ry="36" fill="#e8b8a8"/>
         <ellipse cx="160" cy="45" rx="68" ry="36" fill="#e8b8a8" opacity="0.38"/>
         <ellipse cx="200" cy="45" rx="48" ry="31" fill="#e8b8a8" opacity="0.33"/>
         <ellipse cx="112" cy="40" rx="62" ry="31" fill="#f5d3c4" opacity="0.42"/>
