@@ -18,9 +18,9 @@
         <path d="M10,50 Q30,20 50,50 T90,50 T130,50 T170,50" fill="none" stroke="#6bb896" stroke-width="15" stroke-linecap="round" opacity="0.45"/>
       </svg>
       <svg class="floating-svg svg-2" viewBox="0 0 220 90" opacity="0.4" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="70" cy="45" rx="60" ry="35" fill="#f5c842"/>
-        <ellipse cx="140" cy="45" rx="70" ry="35" fill="#f5c842"/>
-        <ellipse cx="210" cy="45" rx="50" ry="30" fill="#f5c842"/>
+        <ellipse cx="70" cy="45" rx="50" ry="35" fill="#f5c842"/>
+        <ellipse cx="140" cy="45" rx="60" ry="35" fill="#f5c842"/>
+        <ellipse cx="210" cy="45" rx="40" ry="30" fill="#f5c842"/>
       </svg>
       <svg class="floating-svg svg-3" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
         <path d="M20,60 Q30,30 40,60 T60,60 T80,60 T100,60 T120,60 T140,60" fill="none" stroke="#f5a3c7" stroke-width="18" stroke-linecap="round" opacity="0.4"/>
