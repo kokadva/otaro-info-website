@@ -17,34 +17,38 @@
       <svg class="floating-svg svg-1" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
         <path d="M10,50 Q30,20 50,50 T90,50 T130,50 T170,50" fill="none" stroke="#6bb896" stroke-width="15" stroke-linecap="round" opacity="0.45"/>
       </svg>
-      <svg class="floating-svg svg-2" viewBox="0 0 250 80" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="60" cy="40" rx="50" ry="30" fill="#f5c842" opacity="0.4"/>
-        <ellipse cx="140" cy="40" rx="60" ry="30" fill="#f5c842" opacity="0.4"/>
-        <ellipse cx="100" cy="35" rx="55" ry="25" fill="#fad85e" opacity="0.4"/>
+      <svg class="floating-svg svg-2" viewBox="0 0 280 90" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="70" cy="45" rx="60" ry="35" fill="#f5c842" opacity="0.4"/>
+        <ellipse cx="170" cy="45" rx="70" ry="35" fill="#f5c842" opacity="0.4"/>
+        <ellipse cx="210" cy="45" rx="50" ry="30" fill="#f5c842" opacity="0.35"/>
+        <ellipse cx="120" cy="40" rx="65" ry="30" fill="#fad85e" opacity="0.45"/>
       </svg>
       <svg class="floating-svg svg-3" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
         <path d="M20,60 Q30,30 40,60 T60,60 T80,60 T100,60 T120,60 T140,60" fill="none" stroke="#f5a3c7" stroke-width="18" stroke-linecap="round" opacity="0.4"/>
       </svg>
-      <svg class="floating-svg svg-4" viewBox="0 0 200 70" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="35" rx="45" ry="28" fill="#7eb8d4" opacity="0.38"/>
-        <ellipse cx="120" cy="35" rx="55" ry="28" fill="#7eb8d4" opacity="0.38"/>
-        <ellipse cx="85" cy="32" rx="48" ry="24" fill="#a5d4e8" opacity="0.38"/>
+      <svg class="floating-svg svg-4" viewBox="0 0 240 85" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="60" cy="42" rx="55" ry="33" fill="#7eb8d4" opacity="0.38"/>
+        <ellipse cx="145" cy="42" rx="65" ry="33" fill="#7eb8d4" opacity="0.38"/>
+        <ellipse cx="185" cy="42" rx="45" ry="28" fill="#7eb8d4" opacity="0.33"/>
+        <ellipse cx="102" cy="37" rx="58" ry="28" fill="#a5d4e8" opacity="0.42"/>
       </svg>
       <svg class="floating-svg svg-5" viewBox="0 0 150 90" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15,45 Q25,25 35,45 T55,45 T75,45 T95,45 T115,45" fill="none" stroke="#f9b8d9" stroke-width="12" stroke-linecap="round" opacity="0.42"/>
+        <path d="M15,45 Q25,25 35,45 T55,45 T75,45 T95,45 T115,45" fill="none" stroke="#f9c8a8" stroke-width="12" stroke-linecap="round" opacity="0.42"/>
       </svg>
-      <svg class="floating-svg svg-6" viewBox="0 0 220 75" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="55" cy="38" rx="48" ry="30" fill="#ff99bb" opacity="0.35"/>
-        <ellipse cx="135" cy="38" rx="58" ry="30" fill="#ff99bb" opacity="0.35"/>
-        <ellipse cx="95" cy="34" rx="52" ry="26" fill="#ffb8d0" opacity="0.35"/>
+      <svg class="floating-svg svg-6" viewBox="0 0 260 90" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="65" cy="45" rx="58" ry="36" fill="#e8b8a8" opacity="0.38"/>
+        <ellipse cx="160" cy="45" rx="68" ry="36" fill="#e8b8a8" opacity="0.38"/>
+        <ellipse cx="200" cy="45" rx="48" ry="31" fill="#e8b8a8" opacity="0.33"/>
+        <ellipse cx="112" cy="40" rx="62" ry="31" fill="#f5d3c4" opacity="0.42"/>
       </svg>
       <svg class="floating-svg svg-7" viewBox="0 0 190 95" xmlns="http://www.w3.org/2000/svg">
         <path d="M12,48 Q28,22 44,48 T76,48 T108,48 T140,48 T172,48" fill="none" stroke="#8fc5ab" stroke-width="14" stroke-linecap="round" opacity="0.42"/>
       </svg>
-      <svg class="floating-svg svg-8" viewBox="0 0 230 85" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="58" cy="42" rx="52" ry="32" fill="#fab3d1" opacity="0.38"/>
-        <ellipse cx="142" cy="42" rx="62" ry="32" fill="#fab3d1" opacity="0.38"/>
-        <ellipse cx="100" cy="38" rx="56" ry="28" fill="#ffd1e6" opacity="0.38"/>
+      <svg class="floating-svg svg-8" viewBox="0 0 270 90" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="68" cy="45" rx="62" ry="36" fill="#f9b8d9" opacity="0.35"/>
+        <ellipse cx="165" cy="45" rx="72" ry="36" fill="#f9b8d9" opacity="0.35"/>
+        <ellipse cx="205" cy="45" rx="52" ry="31" fill="#f9b8d9" opacity="0.3"/>
+        <ellipse cx="116" cy="40" rx="66" ry="31" fill="#ffd1e6" opacity="0.38"/>
       </svg>
     </div>
   </section>
@@ -149,8 +153,8 @@
 }
 
 .svg-2 {
-  width: 250px;
-  height: 80px;
+  width: 280px;
+  height: 90px;
   top: 25%;
   right: 12%;
   animation-delay: 1.5s;
@@ -165,8 +169,8 @@
 }
 
 .svg-4 {
-  width: 200px;
-  height: 70px;
+  width: 240px;
+  height: 85px;
   top: 55%;
   right: 20%;
   animation-delay: 4.5s;
@@ -181,8 +185,8 @@
 }
 
 .svg-6 {
-  width: 220px;
-  height: 75px;
+  width: 260px;
+  height: 90px;
   top: 40%;
   left: 25%;
   animation-delay: 5s;
@@ -197,8 +201,8 @@
 }
 
 .svg-8 {
-  width: 230px;
-  height: 85px;
+  width: 270px;
+  height: 90px;
   top: 65%;
   right: 10%;
   animation-delay: 6s;
