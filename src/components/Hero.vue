@@ -10,7 +10,7 @@
       <h1 class="title">Otaro</h1>
       <p class="subtitle">Handcrafted Colorful Shelves</p>
       <p class="description">Pastel-colored, wavy-shaped MDF shelves to brighten your space</p>
-      <a href="#contact" class="cta-button">Get in Touch</a>
+      <a href="#contact" class="cta-button">Order Now</a>
     </div>
 
     <div class="floating-shapes">
