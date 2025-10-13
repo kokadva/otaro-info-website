@@ -147,7 +147,7 @@
 
   .image-placeholder {
     order: -1;
-    min-height: 300px;
+    height: 200px;
   }
 
   .about {
