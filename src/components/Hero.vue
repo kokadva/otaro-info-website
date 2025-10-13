@@ -35,9 +35,9 @@
         <path d="M15,45 Q25,25 35,45 T55,45 T75,45 T95,45 T115,45" fill="none" stroke="#f9c8a8" stroke-width="12" stroke-linecap="round" opacity="0.42"/>
       </svg>
       <svg class="floating-svg svg-6" viewBox="0 0 220 90"  opacity="0.38" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="180" cy="45" rx="40" ry="28" fill="#e8b8a8"/>
+        <ellipse cx="70" cy="45" rx="40" ry="28" fill="#e8b8a8"/>
         <ellipse cx="130" cy="45" rx="60" ry="38" fill="#e8b8a8"/>
-        <ellipse cx="70" cy="45" rx="50" ry="35" fill="#e8b8a8"/>
+        <ellipse cx="180" cy="45" rx="50" ry="35" fill="#e8b8a8"/>
       </svg>
       <svg class="floating-svg svg-7" viewBox="0 0 190 95" xmlns="http://www.w3.org/2000/svg">
         <path d="M12,48 Q28,22 44,48 T76,48 T108,48 T140,48 T172,48" fill="none" stroke="#8fc5ab" stroke-width="14" stroke-linecap="round" opacity="0.42"/>
