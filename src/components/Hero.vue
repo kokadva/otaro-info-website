@@ -15,28 +15,36 @@
 
     <div class="floating-shapes">
       <svg class="floating-svg svg-1" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10,50 Q30,20 50,50 T90,50 T130,50 T170,50" fill="none" stroke="#8bc9a8" stroke-width="15" stroke-linecap="round" opacity="0.4"/>
+        <path d="M10,50 Q30,20 50,50 T90,50 T130,50 T170,50" fill="none" stroke="#6bb896" stroke-width="15" stroke-linecap="round" opacity="0.45"/>
       </svg>
       <svg class="floating-svg svg-2" viewBox="0 0 250 80" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="60" cy="40" rx="50" ry="30" fill="#f4d35e" opacity="0.35"/>
-        <ellipse cx="140" cy="40" rx="60" ry="30" fill="#f4d35e" opacity="0.35"/>
-        <ellipse cx="100" cy="35" rx="55" ry="25" fill="#fae588" opacity="0.35"/>
+        <ellipse cx="60" cy="40" rx="50" ry="30" fill="#f5c842" opacity="0.4"/>
+        <ellipse cx="140" cy="40" rx="60" ry="30" fill="#f5c842" opacity="0.4"/>
+        <ellipse cx="100" cy="35" rx="55" ry="25" fill="#fad85e" opacity="0.4"/>
       </svg>
       <svg class="floating-svg svg-3" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20,60 Q30,30 40,60 T60,60 T80,60 T100,60 T120,60 T140,60" fill="none" stroke="#a8d5ba" stroke-width="18" stroke-linecap="round" opacity="0.35"/>
+        <path d="M20,60 Q30,30 40,60 T60,60 T80,60 T100,60 T120,60 T140,60" fill="none" stroke="#f5a3c7" stroke-width="18" stroke-linecap="round" opacity="0.4"/>
       </svg>
       <svg class="floating-svg svg-4" viewBox="0 0 200 70" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="35" rx="45" ry="28" fill="#b8d4e8" opacity="0.3"/>
-        <ellipse cx="120" cy="35" rx="55" ry="28" fill="#b8d4e8" opacity="0.3"/>
-        <ellipse cx="85" cy="32" rx="48" ry="24" fill="#d4e8f5" opacity="0.3"/>
+        <ellipse cx="50" cy="35" rx="45" ry="28" fill="#7eb8d4" opacity="0.38"/>
+        <ellipse cx="120" cy="35" rx="55" ry="28" fill="#7eb8d4" opacity="0.38"/>
+        <ellipse cx="85" cy="32" rx="48" ry="24" fill="#a5d4e8" opacity="0.38"/>
       </svg>
       <svg class="floating-svg svg-5" viewBox="0 0 150 90" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15,45 Q25,25 35,45 T55,45 T75,45 T95,45 T115,45" fill="none" stroke="#f9e07f" stroke-width="12" stroke-linecap="round" opacity="0.4"/>
+        <path d="M15,45 Q25,25 35,45 T55,45 T75,45 T95,45 T115,45" fill="none" stroke="#f9b8d9" stroke-width="12" stroke-linecap="round" opacity="0.42"/>
       </svg>
       <svg class="floating-svg svg-6" viewBox="0 0 220 75" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="55" cy="38" rx="48" ry="30" fill="#e8d5c4" opacity="0.35"/>
-        <ellipse cx="135" cy="38" rx="58" ry="30" fill="#e8d5c4" opacity="0.35"/>
-        <ellipse cx="95" cy="34" rx="52" ry="26" fill="#f5e6d3" opacity="0.35"/>
+        <ellipse cx="55" cy="38" rx="48" ry="30" fill="#ff99bb" opacity="0.35"/>
+        <ellipse cx="135" cy="38" rx="58" ry="30" fill="#ff99bb" opacity="0.35"/>
+        <ellipse cx="95" cy="34" rx="52" ry="26" fill="#ffb8d0" opacity="0.35"/>
+      </svg>
+      <svg class="floating-svg svg-7" viewBox="0 0 190 95" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12,48 Q28,22 44,48 T76,48 T108,48 T140,48 T172,48" fill="none" stroke="#8fc5ab" stroke-width="14" stroke-linecap="round" opacity="0.42"/>
+      </svg>
+      <svg class="floating-svg svg-8" viewBox="0 0 230 85" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="58" cy="42" rx="52" ry="32" fill="#fab3d1" opacity="0.38"/>
+        <ellipse cx="142" cy="42" rx="62" ry="32" fill="#fab3d1" opacity="0.38"/>
+        <ellipse cx="100" cy="38" rx="56" ry="28" fill="#ffd1e6" opacity="0.38"/>
       </svg>
     </div>
   </section>
@@ -178,6 +186,22 @@
   top: 40%;
   left: 25%;
   animation-delay: 5s;
+}
+
+.svg-7 {
+  width: 190px;
+  height: 95px;
+  bottom: 20%;
+  left: 35%;
+  animation-delay: 3.5s;
+}
+
+.svg-8 {
+  width: 230px;
+  height: 85px;
+  top: 65%;
+  right: 10%;
+  animation-delay: 6s;
 }
 
 @keyframes fadeIn {
