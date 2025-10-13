@@ -151,6 +151,11 @@
     min-height: 200px;
   }
 
+  .placeholder-content p {
+    top: 30%;
+    left: 20%;
+  }
+
   .about {
     padding: 4rem 1.5rem;
   }
