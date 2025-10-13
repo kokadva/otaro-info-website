@@ -186,7 +186,7 @@
 .svg-7 {
   width: 190px;
   height: 95px;
-  bottom: 16%;
+  bottom: 14%;
   left: 35%;
   animation-delay: 3.5s;
 }
