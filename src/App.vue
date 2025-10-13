@@ -8,8 +8,8 @@ import Contact from './components/Contact.vue'
 <template>
   <div class="app">
     <Hero />
-    <About />
     <Gallery />
+    <About />
     <Contact />
   </div>
 </template>
