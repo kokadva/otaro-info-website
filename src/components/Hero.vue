@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { useTranslation } from '../i18n'
+
+const { t } = useTranslation()
+</script>
+
 <template>
   <section class="hero">
     <div class="wave-bg">
@@ -7,10 +13,10 @@
     </div>
 
     <div class="hero-content">
-      <h1 class="title">Otaro</h1>
-      <p class="subtitle">Handcrafted Colorful Shelves</p>
-      <p class="description">Pastel-colored, wavy-shaped MDF shelves to brighten your space</p>
-      <a href="#contact" class="cta-button">Order Now</a>
+      <h1 class="title">{{ t('hero.title') }}</h1>
+      <p class="subtitle">{{ t('hero.subtitle') }}</p>
+      <p class="description">{{ t('hero.description') }}</p>
+      <a href="#contact" class="cta-button">{{ t('hero.cta') }}</a>
     </div>
 
     <div class="floating-shapes">

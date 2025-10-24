@@ -1,57 +1,68 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useTranslation } from '../i18n'
+
+const { t } = useTranslation()
 
 interface ShelfItem {
   id: number
-  title: string
+  titleKey: string
   image: string
-  description: string
+  descriptionKey: string
   galleryImages: string[]
 }
 
-const shelves = ref<ShelfItem[]>([
+const shelfData = ref<ShelfItem[]>([
   {
     id: 1,
-    title: 'Mint Green Wavy Shelf',
+    titleKey: 'shelves.item1.title',
     image: '/IMG_4538.jpg',
-    description: 'Perfect for books and decor',
+    descriptionKey: 'shelves.item1.description',
     galleryImages: ['/IMG_4538.jpg', '/IMG_4542.jpg', '/IMG_4557.jpg', '/IMG_4579_jpg.jpg']
   },
   {
     id: 2,
-    title: 'Soft Mint Display',
+    titleKey: 'shelves.item2.title',
     image: '/IMG_4542.jpg',
-    description: 'Elegant curved design',
+    descriptionKey: 'shelves.item2.description',
     galleryImages: ['/IMG_4542.jpg', '/IMG_4538.jpg', '/IMG_4583.jpg', '/IMG_4557.jpg']
   },
   {
     id: 3,
-    title: 'Minimal Green Shelf',
+    titleKey: 'shelves.item3.title',
     image: '/IMG_4557.jpg',
-    description: 'Clean and modern',
+    descriptionKey: 'shelves.item3.description',
     galleryImages: ['/IMG_4557.jpg', '/IMG_4579_jpg.jpg', '/IMG_4538.jpg', '/IMG_4542.jpg']
   },
   {
     id: 4,
-    title: 'Mint Statement Piece',
+    titleKey: 'shelves.item4.title',
     image: '/IMG_4579_jpg.jpg',
-    description: 'Eye-catching wave shape',
+    descriptionKey: 'shelves.item4.description',
     galleryImages: ['/IMG_4579_jpg.jpg', '/IMG_4583.jpg', '/IMG_4542.jpg', '/IMG_4557.jpg']
   },
   {
     id: 5,
-    title: 'Stylish Green Shelf',
+    titleKey: 'shelves.item5.title',
     image: '/IMG_4583.jpg',
-    description: 'Functional art for your wall',
+    descriptionKey: 'shelves.item5.description',
     galleryImages: ['/IMG_4583.jpg', '/IMG_4538.jpg', '/IMG_4579_jpg.jpg', '/IMG_4542.jpg']
   },
 ])
 
+const shelves = computed(() => {
+  return shelfData.value.map(shelf => ({
+    ...shelf,
+    title: t(shelf.titleKey),
+    description: t(shelf.descriptionKey)
+  }))
+})
+
 const isModalOpen = ref(false)
-const currentShelf = ref<ShelfItem | null>(null)
+const currentShelf = ref<any>(null)
 const currentImageIndex = ref(0)
 
-const openModal = (shelf: ShelfItem) => {
+const openModal = (shelf: any) => {
   currentShelf.value = shelf
   currentImageIndex.value = 0
   isModalOpen.value = true
@@ -86,8 +97,8 @@ const goToImage = (index: number) => {
 <template>
   <section id="gallery" class="gallery">
     <div class="container">
-      <h2 class="section-title">The Collection</h2>
-      <p class="section-subtitle">Explore our handcrafted colorful shelves</p>
+      <h2 class="section-title">{{ t('gallery.title') }}</h2>
+      <p class="section-subtitle">{{ t('gallery.subtitle') }}</p>
 
       <div class="gallery-grid">
         <div
@@ -99,7 +110,7 @@ const goToImage = (index: number) => {
           <div class="shelf-image">
             <img :src="shelf.image" :alt="shelf.title" />
             <div class="image-overlay">
-              <span class="view-gallery">View Gallery</span>
+              <span class="view-gallery">{{ t('gallery.viewGallery') }}</span>
             </div>
           </div>
           <div class="shelf-info">
@@ -163,8 +174,8 @@ const goToImage = (index: number) => {
       </Teleport>
 
       <div class="cta-section">
-        <p class="cta-text">Love what you see? Let's create something special for your space!</p>
-        <a href="#contact" class="cta-button">Order Your Shelf</a>
+        <p class="cta-text">{{ t('gallery.ctaText') }}</p>
+        <a href="#contact" class="cta-button">{{ t('gallery.ctaButton') }}</a>
       </div>
     </div>
   </section>

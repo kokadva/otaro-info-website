@@ -1,18 +1,23 @@
+<script setup lang="ts">
+import { useTranslation } from '../i18n'
+import { translations, currentLocale } from '../i18n'
+import { computed } from 'vue'
+
+const { t } = useTranslation()
+
+const aboutParagraphs = computed(() => {
+  return translations[currentLocale.value].about.paragraphs
+})
+</script>
+
 <template>
   <section class="about">
     <div class="container">
       <div class="content">
         <div class="text-content">
-          <h2 class="section-title">About Otaro</h2>
-          <p class="description">
-            Welcome to my creative corner! I handcraft unique, colorful MDF shelves that bring
-            joy and personality to any space. Each piece features playful wavy shapes and
-            beautiful pastel colors, designed to be both functional and artistic.
-          </p>
-          <p class="description">
-            What started as a small passion project has grown into a creative business where
-            I transform simple materials into delightful decorative pieces. Every shelf is
-            carefully made with attention to detail and a love for bright, cheerful design.
+          <h2 class="section-title">{{ t('about.title') }}</h2>
+          <p v-for="(paragraph, index) in aboutParagraphs" :key="index" class="description">
+            {{ paragraph }}
           </p>
           <div class="features">
             <div class="feature">

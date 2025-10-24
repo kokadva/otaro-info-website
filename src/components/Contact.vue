@@ -1,12 +1,17 @@
+<script setup lang="ts">
+import { useTranslation } from '../i18n'
+
+const { t } = useTranslation()
+</script>
+
 <template>
   <section id="contact" class="contact">
     <div class="container">
       <div class="content">
         <div class="info-section">
-          <h2 class="section-title">Let's Connect!</h2>
+          <h2 class="section-title">{{ t('contact.title') }}</h2>
           <p class="description">
-            Ready to add some color to your space? I'd love to hear from you!
-            Send me an email if you want to make an order or if you have any ideas, questions, or custom requests.
+            {{ t('contact.subtitle') }}
           </p>
 
           <div class="contact-details">
